@@ -1,0 +1,519 @@
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    Themes Bootstrap - Smart Agency Template v1.0.0 (https://themesbootstrap.com.mx/templates/smart-agenct-template.html)
+    Copyright 2019 Themes Bootstrap
+    Licensed under MIT (https://github.com/diegovr7/smart-agency/blob/master/LICENSE)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+:root {
+  --dark-color: #1a1a1a;
+  --white-color: #ffffff;
+  --light-grey-color: #f5f5f5;
+  --gold-color: #ffb944;
+  
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.bgDark { background-color: var(--dark-color); }
+.bgLight { background-color: var(--white-color); }
+.bgLightGrey { background-color: var(--light-grey-color); }
+
+.colorDark { color: var(--dark-color) !important; }
+
+h1 { font-size: 66px; font-weight: 700; line-height: 80px; }
+h2 { font-size: 48px; margin-bottom: 30px; }
+h3 { font-size: 33px; }
+h5 { margin-bottom: 0px; }
+
+p {
+  font-size: 18px;
+  color: var(--dark-co);
+  opacity: .5;
+  line-height: 1.8;
+  margin-bottom: 0px;
+}
+
+a:hover { text-decoration: none; }
+
+.btn {
+  font-size: 14px;
+  padding: 15px 26px;
+  min-width: 160px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border: 2px solid var(--dark-color);
+}
+
+.btn-secondary {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  border: 2px solid var(--white-color);
+}
+
+.btn-alternate {
+  background-color: transparent;
+  color: var(--white-color);
+  border: 2px solid var(--white-color);
+}
+
+.btn-primary:hover { background-color: var(--dark-color); border: 2px solid var(--dark-color); }
+.btn-secondary:hover { background-color: var(--white-color); color: var(--dark-color); border: 2px solid var(--white-color); }
+.btn-secondary:focus { background-color: var(--white-color) !important; outline: none; border: 2px solid var(--white-color) !important; box-shadow: none; }
+
+.logo-brand {
+  max-width: 180px;
+  min-width: 160px;
+}
+
+section { padding: 120px 0; }
+
+.divider { border-bottom: 2px solid var(--light-grey-color); }
+
+.content-center {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-control {
+  font-size: 14px;
+  border: 1px solid #cacaca;
+  padding: 15px;
+  border-radius: 2px;
+}
+
+.form-control:focus {
+  border: 1px solid var(--dark-color);
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar {
+  background-color: var(--white-color);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+  min-height: 100px;
+}
+
+.nav-link { color: var(--dark-color); }
+.nav-link:hover { color: var(--dark-color); }
+
+.navbar-toggler { font-size: 40px; }
+.navbar-toggler:focus { outline: none; }
+
+/* //////////////
+ Hero
+//////////////*/
+
+#hero {
+  background-image: url(https://cdn.nosequeestudiar.net/uploads/2013/08/quiero-ser-maestro-de-musica.jpg);
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 700px;
+  color: var(--white-color);
+}
+
+#hero p {
+  color: var(--white-color);
+} 
+
+/* //////////////
+ Hero bateria 
+//////////////*/
+
+#bateria {
+  background-image: url(https://www.defondos.com/bulkupload/imagenes-instrumentos-20/Musica/Instrumentos/Bateria%20Musical_800.jpg);
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 700px;
+  color: var(--white-color);
+}
+
+#bateria p {
+  color: var(--white-color);
+}
+/* //////////////
+ Hero congas
+//////////////*/
+
+#congas {
+  background-image: url(data:image/jpeg;base64,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bY8uV1K2wNninpoIBpFExn4WgH4KHekVq3pHHDhuGTxNvfRsDDLI0jvcHezvU5Ijy2EuyNftHYlNP/f08Mp4F8bXkeBIuFZoujNFC7FFSQMcNHNjYHDwda62yJsIXLCIikgLn9rQtirKWoDQC9z6eRwABIezHHiPGz4mgX0xLoFpul8RNJI5vrRYZ221vA9sth44LeaiXBK5NyiohkDmhw0IBHgRcKtSQEREAEREAERWqqobGx0jyGsY0ucToGtBLifABAHC9Hxvdu10vCGFkQ+9h/7bl36j7qinE4ra0C2/qdDqA1oeAfDekKQUkOB58hEROIEREAEREAfHC4sdFGfQiqGz59o0T8o4cVTH/l4cRt93B7CpNUSddJdBLHMxtvSKeWmldwsHRuaO51i/xF+SrmuGuw8PRmB1QbNx7SmqDIJQyEuxjIb2pcHOyvkRZ4N88+CmpcJ1NbO3ezxKQA6eR0hsLdkHAzLlZl/Nd2pgsIiTywiInFCIiACt1PqOyv2Tlzy0VxEAcd1YdJoqujjY0newxsZI03uMrMcDxBDfHLNdiou6GbNdSbero2xubDLHjbZpwDtMkADtNZJMv0UopY8DS5CIiYUIiIALkOtjaRh2ZPa15RuMxfsy9l/ngx277Lr1rukGx46unkppb4JG2JFrtOrXNvxBAI8FD42JXJzfVBPE/ZkRiiEdi5r7D13sOEvJ4lwAPu4LtVruj+xYqOBlPCCI23tc4iS4lziTzJJWxQlhA3lhERSQEREAEREAFEXXpWOc+mpmZkB0rm8SXERx2H4x5qXVDMzfTukYGscL/HKnF/8AmfFJPjA8PU77q22ZJT7PijlxB5xPwuyLA83ayxzFhYkcyV1CImSwsCt5YREUkBERABERABERABERABERABERABERABERABERABERAGNtKujgifNK9rI2Nu5zjYBR71NdGnMi/tCV+KaoYbNt6rXPLnEniXEDwsth1wbJqKmjayCMyNbIHyNHrFrWuDcLfnZm9hnkFY6k6GWKieZDIGumO7a+/ZYGtHZB0Bdi9iR+8MvdJCRETihERABERABERABERABERABERABERABERABERABERABERABERABERABERABERABERABERABERAH/2Q==);
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 700px;
+  color: var(--white-color);
+}
+
+#congas p {
+  color: var(--white-color);
+}
+/* //////////////
+ Hero guitarra acustica
+//////////////*/
+
+#acustic {
+  background-image:url(https://megamusic.blob.core.windows.net/images/0022601_taylor-k24ce-koa-acoustic-guitar-with-pickup-and-cutaway.jpg) ;
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 700px;
+  color: var(--white-color);
+}
+
+#acustic p {
+  color: var(--white-color);
+}
+
+/* //////////////
+ Hero guitarra clasica
+//////////////*/
+
+#clasica {
+  background-image:url(https://musicopolix.com/56427/valencia-guitarra-clasica-vc103-3-4-nat.jpg) ;
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 700px;
+  color: var(--white-color);
+}
+
+#clasica p {
+  color: var(--white-color);
+}
+/* //////////////
+ Hero guitarra electrica
+//////////////*/
+
+#electrica {
+  background-image:url(https://www.tutoca.com/wp-content/uploads/2018/08/pickup-guitarra.jpg) ;
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 700px;
+  color: var(--white-color);
+}
+
+#electrica p {
+  color: var(--white-color);
+}
+/* //////////////
+ Hero piano clasico
+//////////////*/
+
+#pclasico {
+  background-image:url(https://i.ytimg.com/vi/tSXoB2fhHMY/maxresdefault.jpg) ;
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 700px;
+  color: var(--white-color);
+}
+
+#pclasico p {
+  color: var(--white-color);
+}
+/* //////////////
+ Hero piano organeta
+//////////////*/
+
+#organeta {
+  background-image:url(https://http2.mlstatic.com/combo-teclado-organeta-yamaha-psr-e363-con-adaptador-y-base-D_NQ_NP_669571-MCO31005121983_062019-F.jpg) ;
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 700px;
+  color: var(--white-color);
+}
+
+#organeta p {
+  color: var(--white-color);
+}
+
+
+
+
+/* //////////////
+ Portfolio
+//////////////*/
+
+.portfolio-container {
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+  border-radius: 2px;
+}
+
+.portfolio-container img {
+  -moz-transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.portfolio-container:hover img {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.portfolio-details {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  z-index: 9000;
+}
+
+.portfolio-details h2 {
+  margin-bottom: 0px;
+}
+
+.portfolio-details a h2, .portfolio-details a p {
+  color: var(--white-color);
+}
+
+/* //////////////
+ Members
+//////////////*/
+
+.member-container {
+  position: relative;
+  margin: 10px 0;
+}
+
+.member-details {
+  position: absolute;
+  color: var(--white-color);
+  bottom: 0;
+  left: 20px;
+}
+
+.member-details span {
+  font-size: 14px;
+}
+
+.member-details i {
+  padding: 0 5px;
+}
+
+/* //////////////
+ Pricing
+//////////////*/
+
+.pricing-container {
+  margin: 15px 0;
+}
+
+.plans {
+  padding: 50px 80px;
+  border-radius: 2px;
+  min-width: 450px;
+}
+
+.plan-light {
+  background-color: var(--white-color);
+  border: 2px solid var(--dark-color);
+}
+
+.plan-dark {
+  background-color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  color: var(--white-color);
+}
+
+.plans h2 {
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.plans h2 span {
+  font-size: 20px;
+}
+
+.plans ul {
+  list-style-type: square;
+}
+
+/* //////////////
+ Testimonial
+//////////////*/
+
+.carousel {
+  min-height: 240px;
+  padding: 40px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.carousel-item p {
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--dark-color);
+}
+
+.carousel-indicators li {
+  background-color: var(--dark-color);
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  margin: 0 8px;
+}
+
+.carousel-control-next, .carousel-control-prev { 
+  color: var(--white-color);
+  opacity: 1;
+  width: 5%;
+}
+
+.control-button {
+  background-color: var(--dark-color);
+  opacity: 1;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid var(--dark-color);
+  border-radius: 50px;
+  font-size: 20px;
+}
+
+.carousel-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-user {
+  max-width: 240px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.testimonial-user h6 {
+  margin-bottom: 0px;
+}
+
+.testimonial-user span {
+  font-size: 12px;
+}
+
+.testimonial-user img {
+  border-radius: 50%;
+  max-width: 50px;
+  text-align: center;
+}
+
+.rating i {
+  color: var(--gold-color);
+  font-size: 26px;
+}
+
+/* //////////////
+ Footer
+//////////////*/
+
+footer {
+  padding: 80px 0;
+  text-align: center;
+  color: var(--white-color);
+}
+
+footer a {
+  color: var(--white-color);
+}
+
+footer a:hover {
+  color: var(--white-color);
+}
+
+footer .list-inline .list-inline-item {
+  padding: 10px 15px;
+}
+/*
+horas de curso
+*/ 
+.fi276 {
+  clear: none;
+  margin-top: 12px;
+  text-align: center;
+}
+.duracion {
+  font-size: 1.5em;
+  display: block;
+  width: 80px;
+  height: 117px;
+  border-radius: 6px;
+  float: right;
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FF6600;
+  padding: 12px;
+  text-align: left;
+  line-height: 100%;
+  clear: both;
+  margin-top: 0;
+  padding-top: 18px;
+  padding-left: 20px !important;
+} 
+p {
+  line-height: 22px;
+}
+/*
+tamaño imagenes
+*/
+td img{
+  width:254px;
+  height:217px;
+}
+table{
+  margin: auto;
+}
+
+
+
+/* //////////////
+ Media queries
+//////////////*/
+
+@media (max-width: 575.98px) { 
+  h1 { font-size: 40px; line-height: normal; }
+  .portfolio-details h2 { font-size: 32px; }
+  .plans { min-width: unset; padding: 40px; }
+  .carousel-item p { font-size: 20px; }
+
+  .footer-menu { 
+      display: block !important;
+      padding: 20px 0 !important;
+      font-size: 20px;
+  
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .portfolio-details h2 { font-size: 30px; }
+  .plans { min-width: unset; padding: 40px 20px;}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { }
+
+@media (min-width: 1200px) { }
+
+
